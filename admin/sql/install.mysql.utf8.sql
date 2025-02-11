@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS `#__mail_ips` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+        `member_id` int DEFAULT NULL,
+        `created_date` datetime DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `#__mail_members` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+    `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `open` int NOT NULL DEFAULT '1',
+    `address` text COLLATE utf8mb4_unicode_ci,
+    `suburb` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `state` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `country` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `postcode` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `mobile` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `misc` mediumtext COLLATE utf8mb4_unicode_ci,
+    `published` tinyint NOT NULL DEFAULT '0',
+    `checked_out` int unsigned DEFAULT NULL,
+    `checked_out_time` datetime DEFAULT NULL,
+    `ordering` int NOT NULL DEFAULT '0',
+    `access` int unsigned NOT NULL DEFAULT '0',
+    `created_by` int DEFAULT NULL,
+    `created` datetime NOT NULL,
+    `modified` datetime NOT NULL,
+    `modified_by` int unsigned NOT NULL DEFAULT '0',
+    `featured` tinyint unsigned NOT NULL DEFAULT '0',
+    `publish_up` datetime DEFAULT NULL,
+    `publish_down` datetime DEFAULT NULL,
+    `hits` int unsigned NOT NULL DEFAULT '0',
+    PRIMARY KEY (`id`),
+    KEY `idx_access` (`access`),
+    KEY `idx_checkout` (`checked_out`),
+    KEY `idx_state` (`published`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

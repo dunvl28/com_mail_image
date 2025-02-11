@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<fieldset name="mailchimp_options"	label="COM_MAIL_IMAGE_CONFIG_MAILCHIMP_OPTIONS" >
+		<field
+				name="mailchimp_api_key"
+				type="text"
+				label="COM_MAIL_IMAGE_CONFIG_MAILCHIMP_API_KEY_LABEL"
+				description="COM_MAIL_IMAGE_CONFIG_MAILCHIMP_API_KEY_DESC"
+				default=""
+		/>
+		<field
+				name="mailchimp_server_prefix_id"
+				type="text"
+				label="COM_MAIL_IMAGE_CONFIG_MAILCHIMP_SERVER_PREFIX_LABEL"
+				description="COM_MAIL_IMAGE_CONFIG_MAILCHIMP_SERVER_PREFIX_DESC"
+				default=""
+		/>
+
+	</fieldset>
+	<fieldset name="ip_options"	label="COM_MAIL_IMAGE_CONFIG_IP_OPTIONS" >
+		<field
+				name="number_ips_email"
+				type="text"
+				label="COM_MAIL_IMAGE_CONFIG_NUMBER_IPS_EMAIL_LABEL"
+				description="COM_MAIL_IMAGE_CONFIG_NUMBER_IPS_EMAIL_DESC"
+				default="3"
+		/>
+	</fieldset>
+</config>

@@ -1,0 +1,13 @@
+{
+  "name": "mail_image/ip",
+  "license": "GNU-GPL2",
+  "authors": [
+    {
+      "name": "VuLeDuNguyen",
+      "email": "vuledunguyen@gmail.com"
+    }
+  ],
+  "require": {
+    "mailchimp/marketing": "^3.0.80"
+  }
+}

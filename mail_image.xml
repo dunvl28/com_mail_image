@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+    <name>com_mail_image</name>
+    <author>Vu Le Du, Nguyen</author>
+    <creationDate>2025 Jan</creationDate>
+    <copyright>(C)2028 vuledunguyen@gmail.com.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>vuledunguyen@gmail.com</authorEmail>
+    <authorUrl>www.cdtweb.com</authorUrl>
+    <version>5.0.0</version>
+    <description>COM_MAIL_IMAGE_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Component\Mail_Image</namespace>
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <folder>forms</folder>
+        <folder>helpers</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/com_mail_image.ini</language>
+    </languages>
+    <media destination="com_mail_image" folder="media/com_mail_image">
+        <folder>js</folder>
+        <file>index.html</file>
+    </media>
+    <administration>
+        <menu link="option=com_mail_image">COM_MAIL_IMAGE</menu>
+        <filename>mail_image.xml</filename>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>helpers</folder>
+            <folder>services</folder>
+            <folder>src</folder>
+            <folder>sql</folder>
+            <folder>tmpl</folder>
+            <folder>vendor</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/com_mail_image.ini</language>
+            <language tag="en-GB">language/en-GB/com_mail_image.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+
